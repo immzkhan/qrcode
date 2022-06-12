@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Food Website Design Tutorial</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts      -->
+
+    <header>
+
+        <a href="#" class="logo"><i class="fas fa-utensils"></i> Ineuron resto.</a>
+
+        <nav class="navbar">
+            <a class="active" href="#home">home</a>
+
+
+
+            <a href="#menu">menu</a>
+
+
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <span>
+                <a id="cart" href="#" class="fas fa-shopping-cart" style="position: absolute;"></a>
+                <p id="num" style="position: relative; background-color: green; border-radius: 50%; height: 20px; width: 20px; top: -50px; left: 140px; color: white; font-weight: 900; padding-left: 5px; padding-top: 3px; font-size: larger;"></p>
+
+            </span>
+        </div>
+
+    </header>
+
+    <!-- header section ends-->
+
+    <!-- search form  -->
+
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="swiper-container home-slider">
+
+            <div class="swiper-wrapper wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>our special dish</span>
+                        <h3>spicy noodles</h3>
+                        <p>Spicy nooeles made with love of Gunttur Chillies</p>
+
+                    </div>
+                    <div class="image">
+                        <img src="images/home-img-1.png" alt="">
+                    </div>
+                </div>
+
+
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>our special dish</span>
+                        <h3>hot pizza</h3>
+                        <p>Loaded with loads of Farm Things</p>
+
+                    </div>
+                    <div class="image">
+                        <img src="images/home-img-3.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+
+
+
+
+    <!-- menu section starts  -->
+
+    <section class="menu" id="menu">
+
+        <h3 class="sub-heading"> our menu </h3>
+        <h1 class="heading"> today's speciality </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image" id="item1">
+                    <img src="images/menu-1.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Pizza</h3>
+                    <p>Mushroom, Olive, Capsicum.</p>
+                    <button class="btn" id="p1" data-prod="pizza" onclick="addToCard(event, this)">add to cart</button>
+                    <span class="price">Rs 150</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-2.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Burgur</h3>
+                    <p>Chicken patty, Cabbage & Tomato.</p>
+                    <button id="p2" data-prod="Burgur" onclick="addToCard(event, this)" class="btn">add to cart</button>
+                    <span class="price">Rs 99</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-3.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Tortila</h3>
+                    <p>Rolled with Honey & Berries.</p>
+                    <button id="p3" data-prod="Tortila" onclick="addToCard(event, this)" class="btn">add to cart</button>
+                    <span class="price">Rs 99</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-4.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Ice-cream</h3>
+                    <p>Waffers with choco cream.</p>
+                    <button id="p4" data-prod="Ice-cream" onclick="addToCard(event, this)" class="btn">add to cart</button>
+                    <span class="price">Rs 150</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-5.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Choclate Pancake</h3>
+                    <p>Choco Cream, Berries.</p>
+                    <button id="p5" data-prod="Choclate Pancake" onclick="addToCard(event, this)" class="btn">add to cart</button>
+                    <span class="price">Rs 129</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-6.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Cup Cakes </h3>
+                    <p>Greis Current Cream.</p>
+                    <button id="p6" data-prod="Cup Cakes" onclick="addToCard(event, this)" class="btn">add to cart</button>
+                    <span class="price">Rs 145</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-7.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Drinks</h3>
+                    <p>Lime Mint
+                        .</p>
+                    <button id="p7" data-prod="Cup Cakes" onclick="addToCard(event, this)" class="btn">add to cart</button>
+                    <span class="price">Rs 89</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-8.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Fruit Salad</h3>
+                    <p>Stawberry Nuts.</p>
+                    <button id="p8" data-prod="Fruit Salad" onclick="addToCard(event, this)" class="btn">add to cart</button>
+                    <span class="price">Rs 180</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/menu-9.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Orange Juice</h3>
+                    <p>Juice With Curhed Orange.</p>
+                    <button id="p9" data-prod="Orange Juice" onclick="addToCard(event, this)" class="btn">add to cart</button>
+                    <span class="price">Rs 99</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- menu section ends -->
+
+
+
+
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>locations</h3>
+                <a href="#">Banglore</a>
+                <a href="#">Mumbai</a>
+                <a href="#">Delhi</a>
+                <a href="#">Kolkata</a>
+
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">home</a>
+
+
+                <a href="#">menu</a>
+                <a href="#">reivew</a>
+                <a href="#">order</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">+91 1234567890</a>
+                <a href="#">+91 1234567890</a>
+                <a href="#">shaikhanas@gmail.com</a>
+                <a href="#">anasbhai@gmail.com</a>
+
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#">facebook</a>
+                <a href="#">twitter</a>
+                <a href="#">instagram</a>
+                <a href="#">linkedin</a>
+            </div>
+
+        </div>
+
+        <div class="credit"> copyright @ 2022 by <span>Immzkhan</span> </div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+    <!-- loader part  -->
+    <div class="loader-container">
+        <img src="images/loader.gif" alt="">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+
+
+    <!-- <script>
+    let count = localStorage.getItem('count') || 0
+    localStorage.setItem('count', count)
+    const cart = document.getElementById('cart')
+    const addToCart = document.getElementById('addToCart')
+    cart.innerHTML = count
+
+    let item=localStorage.getElementById('item1') 
+    localStorage.setItem('item',item)
+
+
+
+
+    addToCart.addEventListener('click', () => {
+        count++;
+        localStorage.setItem('count', count)
+        cart.innerHTML = count
+    })
+
+console.log(cart)
+</script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBlulkeHFSZquu6ev5AnPOpR4vgl79UCsY",
+            authDomain: "qrcode-282ff.firebaseapp.com",
+            projectId: "qrcode-282ff",
+            storageBucket: "qrcode-282ff.appspot.com",
+            messagingSenderId: "84338535584",
+            appId: "1:84338535584:web:036dbb4654f9ac1f25adc5",
+            measurementId: "G-68X8JKP18X"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+<!-- 
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+        // import { firestore } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-firestore.js";
+        import { firestore } from 'https://www.gstatic.com/firebasejs/9.8.3/firebase-firestore.js'
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBlulkeHFSZquu6ev5AnPOpR4vgl79UCsY",
+            authDomain: "qrcode-282ff.firebaseapp.com",
+            projectId: "qrcode-282ff",
+            storageBucket: "qrcode-282ff.appspot.com",
+            messagingSenderId: "84338535584",
+            appId: "1:84338535584:web:036dbb4654f9ac1f25adc5",
+            measurementId: "G-68X8JKP18X"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+
+
+    </script> -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
